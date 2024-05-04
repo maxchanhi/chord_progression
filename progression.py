@@ -3,9 +3,7 @@ from fractions import Fraction
 import sys
 import os
 from notation import major_keys,minor_keys,durations_fraction
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-sys.path.append(parent_dir)
+
 from motif import rhythm_generation,get_rhythm_motif,melody_rhythm_gen
 
 major_roman = ["I","ii","IV","V"]
