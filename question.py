@@ -59,7 +59,7 @@ def lilypond_generation(melody, name, key,accompany):
     for bar in melody:
         score_meldoy.extend(bar)
     lilypond_score = f"""
-\\version "2.24.1"  
+\\version "2.22.0"  
 \\header {{
   tagline = "" \\language "english"
 }}
