@@ -29,7 +29,7 @@ if choosen_range is None:
     st.warning("Please select a key.")
 new_score = st.button("Generate Score")
 
-if new_score :
+if new_score and ss["button_pressed"]:
     ss["question_data"]=new_question(choosen_range)
     st.rerun()
 if "question_data" not in ss:
