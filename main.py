@@ -24,15 +24,14 @@ st.set_page_config(page_title="Harmonise melody")
 
 st.title("Identify the Correct Harmonic Pattern")
 choosen_range = st.multiselect("Select the keys:",["Major","minor"],default=["Major"])
-
+print(choosen_range)
 if choosen_range is None:
     st.warning("Please select a key.")
 new_score = st.button("Generate Score")
 
-if new_score and choosen_range:
+if new_score and choosen_range is not None:
     ss["question_data"]=new_question(choosen_range)
 if "question_data" not in ss:
-    print(choosen_range)
     ss["question_data"]=new_question(choosen_range)
 
 correct_index,options,key_signature=ss["question_data"]
