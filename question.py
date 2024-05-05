@@ -99,16 +99,8 @@ def lilypond_generation(melody, name, key,accompany):
         f.write(lilypond_score)
 
     # Generate PNG image and MIDI file
-    subprocess.run(['lilypond', '-dpreview', '-dbackend=eps', '--png', '-dresolution=300', '--output=static/score', 'score.ly'],
+    subprocess.run(['lilypond', '-dpreview', '-dbackend=eps', '--png', '-dresolution=300', f'--output=static/cropped_score_{name}', 'score.ly'],
                    check=True)
-    with Image.open('static/score.png') as img:
-        width, height = img.size
-        crop_height = height
-        crop_rectangle = (0, 75, width, crop_height / 5.5)
-        cropped_img = img.crop(crop_rectangle)
-
-        os.makedirs('static', exist_ok=True)
-        cropped_img.save(f'static/cropped_score_{name}.png')
 
     return f'static/cropped_score_{name}.png'
 
