@@ -24,7 +24,6 @@ st.set_page_config(page_title="Harmonise melody")
 
 st.title("Identify the Correct Harmonic Pattern")
 choosen_range = st.multiselect("Select the keys:",["Major","minor"],default=["Major"])
-print(choosen_range)
 if len(choosen_range) ==0:
     st.warning("Please select a key.")
     st.stop()
