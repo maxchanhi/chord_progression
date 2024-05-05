@@ -40,7 +40,7 @@ print(ss["question_data"])
 st.image("static/cropped_score_question.png", use_column_width=True)
 user_ans = st.radio(f"Select the correct harmonic pattern in {key_signature}:",options)
 
-if st.button("Submit",on_click=button_pressed,disabled=ss["button_pressed"]):
+if st.button("Submit",on_click=button_pressed):
     if options.index(user_ans) == correct_index:
         emoji= random.choice(fun_emoji_list)
         st.success(f"Correct!{emoji}")
