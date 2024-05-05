@@ -32,6 +32,7 @@ new_score = st.button("Generate Score")
 if new_score and choosen_range:
     ss["question_data"]=new_question(choosen_range)
 if "question_data" not in ss:
+    print(choosen_range)
     ss["question_data"]=new_question(choosen_range)
 
 correct_index,options,key_signature=ss["question_data"]
