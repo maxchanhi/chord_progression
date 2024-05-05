@@ -31,6 +31,7 @@ new_score = st.button("Generate Score")
 
 if new_score and choosen_range is not None:
     ss["question_data"]=new_question(choosen_range)
+    st.rerun()
 if "question_data" not in ss:
     ss["question_data"]=new_question(choosen_range)
 
@@ -49,7 +50,7 @@ if st.button("Submit",on_click=button_pressed,disabled=ss["button_pressed"]):
         st.audio("static/question.mp3")
     else:
         st.warning(f"Incorrect! The answer is {options[correct_index]}")
-st.rerun()
+
 
 
 
