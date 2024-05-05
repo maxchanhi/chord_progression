@@ -36,6 +36,7 @@ if "question_data" not in ss:
     ss["question_data"]=new_question(choosen_range)
 
 correct_index,options,key_signature=ss["question_data"]
+print(ss["question_data"])
 st.image("static/cropped_score_question.png", use_column_width=True)
 user_ans = st.radio(f"Select the correct harmonic pattern in {key_signature}:",options)
 
