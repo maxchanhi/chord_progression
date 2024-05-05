@@ -1,7 +1,7 @@
 #44 for two bars
 import random
 from fractions import Fraction
-from score_generation import *
+#from score_generation import *
 from notation import * 
 
 
