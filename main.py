@@ -31,7 +31,6 @@ new_score = st.button("Generate Score")
 
 if new_score and ss["button_pressed"]:
     ss["question_data"]=new_question(choosen_range)
-    st.rerun()
 if "question_data" not in ss:
     ss["question_data"]=new_question(choosen_range)
 
