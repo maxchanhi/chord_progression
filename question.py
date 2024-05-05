@@ -106,5 +106,5 @@ def lilypond_generation(melody, name, key,accompany):
 
 
 def audio_generation():
-    subprocess.run(['fluidsynth', '-ni', 'GeneralUser/Yamaha-Grand-Lite-SF-v1.1.sf2', 'static/score.midi', '-F', f'static/question.mp3', '-r', '44100'],
+    subprocess.run(['fluidsynth', '-ni', 'GeneralUser/Yamaha-Grand-Lite-SF-v1.1.sf2', 'static/cropped_score_question.midi', '-F', f'static/question.mp3', '-r', '44100'],
                check=True)
